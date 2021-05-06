@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* ヘッダー */
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+}
+.header-contents {
+  margin: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-left {
+  color: tan;
+}
+.header-right {
+  display: flex;
+  justify-content: space-around;
+}
+.header-right li {
+  list-style: none;
+  text-align: center;
+  float: left;
+  padding-left: 40px;
+}
+.header-right a {
+  text-decoration: none;
+  color: tan;
+}
+
+
+
+/*メイン*/
+.main-visual {
+  background: url(../img/couple-4615557_1280.jpg);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.main-ttl {
+  justify-content: center;
+  display: flex;
+}
+.main-ttl p {
+  color: white;
+  font-size: 50px;
+  margin-top: 300px;
+  letter-spacing: 25px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.wrapper {
+  margin: 50px;
+}
+.sub-visual {
+  display: flex;
+  justify-content: center
+}
+.description {
+  background-color: tan;
+  width: 200px;
+  flex-grow: 1;
+  margin-right: 50px;
+  padding: 120px 0  80px;
+  display: grid;
+  text-align: center;
+}
+.description h1 {
+  color: white;
+  font-size: 30px;
+}
+.description p {
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+}
+.btn {
+  border: 1px solid white;
+  margin: auto;
+  padding: 7px 48px;
+}
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+.sub-img {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-grow: 2;
+  margin: 0 auto;
+}
+.instruction-visual {
+  height: 400px;
+}
+.text {
+  text-align: center;
+  margin-top: 70px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.text h1 {
+  font-family: 'Cormorant Garamond', serif;
+font-family: 'Nanum Myeongjo', serif;
+font-weight: lighter;
+  font-size: 80px;
+}
+.text p {
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+.last-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.last-img {
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.last-visual > .description {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 120px 0  80px;
+  margin: 250px 0px 30px 825px;
+}
+/*フッター*/
+
+footer {
+  height: 200px;
+  background-color: tan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-contents {
+  display: flex;
+  text-align: center;
+  color: white;
+}
+.contact {
+  margin-right: 30px;
+}
+.contact li {
+  text-align: center;
+  list-style: none;
+}
+.contact p {
+  text-align: center;
+}
