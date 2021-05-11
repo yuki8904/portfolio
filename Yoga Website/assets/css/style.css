@@ -1,0 +1,774 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*ヘッダー*/
+.header {
+  background: url(../img/photo-1580492990551-8e359a9addae.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.header-nav ul {
+  display: flex;
+  text-align: center;
+  position: fixed;
+}
+
+.header-nav li {
+  padding-top: 30px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  padding-right: 20px;
+  color: #4d555a;
+}
+
+.header-nav a:hover {
+  color: #fff;
+}
+
+.header-none-name>img {
+  display: none;
+}
+
+.header-name {
+  font-size: 20px;
+}
+
+.header-name>img {
+  width: 170px;
+  height: 90px;
+}
+
+@media screen and (max-width: 780px) {
+  .header-name>img {
+    display: none;
+  }
+}
+
+.top-view-ttl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 300px;
+  font-weight: lighter;
+}
+
+.top-view-ttl p {
+  font-size: 50px;
+  padding-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.top-view-ttl a {
+  text-decoration: none;
+  color: #4d555a;
+  border: 1px solid black;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.top-view-ttl a:hover {
+  background-color: rgba(138, 135, 135, 0.4);
+  color: #fff;
+}
+
+/* ページトップボタン */
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: gray;
+  opacity: 0.6;
+}
+
+#page_top a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*チェックボックス非表示*/
+.navToggle {
+  display: none;
+}
+
+@media (max-width :780px) {
+
+  /*ハンバーガーアイコン*/
+  .btn-burger {
+    cursor: pointer;
+    display: block;
+    width: 56px;
+    height: 60px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+
+  .icon,
+  .icon:before,
+  .icon:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 35px;
+    background-color: #444;
+    border-radius: 2px;
+    display: block;
+    content: '';
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .icon:before {
+    top: 20px;
+  }
+
+  .icon:after {
+    top: -20px;
+  }
+
+  .navToggle:checked~.btn-burger .icon {
+    background: transparent;
+  }
+
+  .navToggle:checked~.btn-burger .icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .navToggle:checked~.btn-burger .icon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .icon,
+  .icon:before,
+  .icon:after {
+    transition: all .8s;
+  }
+
+  .header-nav {
+    background-color: rgba(192, 192, 192, 0.3);
+    background-size: auto;
+
+  }
+
+  .header-nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+
+  .header-nav a:hover {
+    color: gray;
+  }
+
+  .header-nav ul {
+    list-style: none;
+    display: none;
+    margin-top: 50px;
+  }
+
+  .header-nav li {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .navToggle:checked~.list_nave_header {
+    display: block;
+  }
+
+  .header-none-name>img {
+    margin: auto;
+  }
+
+  .header-none-name>img:hover {
+    background-color: gray;
+  }
+
+
+  @media (min-width: 780px) {
+
+    /* ハンバーガーボタン */
+    .btn-burger {
+      display: none;
+    }
+
+    .navToggle:checked~.header-nav ul {
+      display: none;
+    }
+
+    .header-nav {
+      height: 500px;
+    }
+
+    .header-nav ul {
+      display: flex;
+      justify-content: center;
+      height: 200px;
+      align-items: center;
+    }
+
+
+  }
+}
+
+/*メイン*/
+.wrapper {
+  margin: 100px 100px 0 100px;
+}
+
+section {
+  margin-bottom: 10vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-size: 25px;
+  padding-bottom: 40px;
+  font-weight: lighter;
+}
+
+/*メイントピック*/
+.main-top>h1,
+p {
+  padding-bottom: 70px;
+}
+
+.main-top>p {
+  letter-spacing: 2px;
+  color: gray;
+}
+
+.border {
+  border: 1px solid gray;
+  opacity: 0.1;
+}
+
+.main-description {
+  padding: 70px 0;
+  color: rgb(83, 83, 83);
+}
+
+.main-description>p {
+  padding-bottom: 50px;
+}
+
+.main-description>a {
+  text-decoration: none;
+  color: gray;
+  border: 1px solid black;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.main-description>a:hover {
+  background-color: rgba(138, 135, 135, 0.4);
+  color: black;
+}
+
+/*レッスンスケジュール*/
+.sub-topic {
+  background: url(../img/stephanie-greene-1aB-1s4BIEo-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+.schedule {
+  padding-top: 100px;
+}
+
+.schedule>h1 {
+  padding-bottom: 10px;
+}
+
+.schedule>a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid black;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.schedule>a:hover {
+  background-color: rgba(138, 135, 135, 0.4);
+  color: #fff;
+}
+
+/*新着情報*/
+.news>h1 {
+  padding: 50px 0 10px 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.info {
+  margin: 1em auto;
+  padding: 0 1.5em;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.3;
+  color: #444;
+  overflow: auto;
+  width: 80%;
+  height: 10em;
+  background-color: #fcfcfc;
+}
+
+.info dl {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.info dt {
+  padding-bottom: 0;
+  width: 6em;
+}
+
+@media screen and (min-width: 480px) {
+  .info dt {
+    clear: left;
+    float: left;
+  }
+
+  .info dd {
+    margin-left: 0.5em;
+  }
+}
+
+/* お問い合わせ */
+.contact>h1 {
+  padding-bottom: 10px;
+  padding: 50px 0 10px 0;
+}
+
+.contact>a {
+  text-decoration: none;
+  color: gray;
+  border: 1px solid black;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.contact>a:hover {
+  background-color: rgba(138, 135, 135, 0.4);
+  color: black;
+}
+
+/* sns */
+.sns-icon {
+  padding-top: 100px;
+}
+
+.sns-icon>p {
+  padding-bottom: 30px;
+}
+
+.sns-icon ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns-icon img {
+  width: 45px;
+  margin: 0 15px;
+}
+
+
+/*フッター*/
+footer {
+  background-color: black;
+  color: white;
+  height: 60px;
+}
+
+footer>p {
+  padding-bottom: 0;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:780px) {
+  .header {
+    background-position: center;
+  }
+
+  .header-none-name>img {
+    display: block;
+    width: 100px;
+    height: 60px;
+  }
+
+  .header-name {
+    display: none;
+  }
+
+  .header-nav>ul {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    padding-bottom: 10px;
+  }
+
+  .header-nav li {
+    padding-top: 5px;
+  }
+
+  .top-view-ttl>p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .wrapper {
+    margin: 50px 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .wrapper>p {
+    font-size: 12px;
+  }
+
+  .schedule>p {
+    font-size: 14px;
+  }
+
+}
+
+/* about.thml */
+.header-about {
+  background: url(../img/artem-kovalev-fk3XUcfTAvk-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 60vh;
+}
+
+.top-view-ttl-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 180px;
+  font-weight: lighter;
+}
+
+.top-view-ttl-about p {
+  font-size: 50px;
+  padding-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+
+.top-view-ttl-about a {
+  text-decoration: none;
+  color: #4d555a;
+  border: 1px solid black;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.top-view-ttl-about a:hover {
+  background-color: rgba(138, 135, 135, 0.4);
+  color: #fff;
+}
+
+.about-box {
+  color: rgb(83, 83, 83);
+}
+
+.first {
+  letter-spacing: 4px;
+
+}
+
+.main-description ul {
+  padding-bottom: 50px;
+}
+
+.main-description li {
+  padding-bottom: 8px;
+}
+
+@media screen and (max-width:780px) {
+  .first {
+    font-size: 13px;
+  }
+}
+
+/*yoga.html*/
+.header-yoga {
+  background: url(../img/madison-lavern-D2uK7elFBU4-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 60vh;
+}
+
+.text-none {
+  display: none;
+}
+
+@media screen and (max-width:780px) {
+  .text_none {
+    display: none;
+  }
+
+  .text-none {
+    display: block;
+    font-size: 13px;
+  }
+}
+
+/* lesson.html */
+.header-lesson {
+  background: url(../img/kaylee-garrett-GaprWyIw66o-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 60vh;
+}
+
+.topic {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.topic-box {
+  text-align: center;
+  color: gray;
+}
+
+.topic-box h3 {
+  margin: 30px auto;
+  color: rgb(107, 107, 107);
+}
+
+.osare3-table {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  border-collapse: separate;
+  border: none;
+  border-spacing: 0px 10px;
+}
+
+.osare3-table tbody td,
+.osare3-table tfoot td {
+  text-align: center;
+}
+
+.osare3-table thead th {
+  padding: 20px;
+  color: #FFF;
+  font-weight: bold;
+  background: black;
+}
+
+.osare3-table thead th:nth-child(2) {
+  border-radius: 5px 0 0 0;
+}
+
+.osare3-table thead th:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+.osare3-table th,
+.osare3-table td {
+  border: 0 none !important;
+}
+
+.osare3-table tr:nth-child(even) td {
+  background: #f5f5f5;
+}
+
+.osare3-table tr:nth-child(odd) td {
+  background: #FDFDFD;
+}
+
+.osare3-table tbody th,
+.osare3-table tfoot th,
+.osare3-table thead th:first-child {
+  background: none;
+  color: #666;
+  font-weight: bold;
+  line-height: 4.5em;
+  text-align: right;
+  width: 70px;
+}
+
+@media (max-width: 767px) {
+
+  .col6t th,
+  .col6t td {
+    font-size: 0.4em;
+    padding: 10px 0px;
+  }
+
+  .col5t th,
+  .col5t td {
+    font-size: 0.5em;
+    padding: 10px 0px;
+  }
+
+  .col4t th,
+  .col4t td {
+    font-size: 0.7em;
+    padding: 10px 5px;
+  }
+
+  .col3t th,
+  .col3t td {
+    font-size: 0.8em;
+    padding: 10px 10px;
+  }
+}
+
+
+
+/* price.html */
+.header-price {
+  background: url(../img/chelsea-gates-n8L1VYaypcw-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 60vh;
+}
+
+.main-topic>ul {
+  line-height: 50px;
+  padding-bottom: 50px;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(33, 110, 112);
+}
+
+.main-topic>p {
+  color: tomato;
+}
+
+/* contact.html */
+.header-contact {
+  background: url(../img/jazmin-quaynor-8ioenvmof-I-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  height: 60vh;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input {
+  width: 300px;
+  margin: 20px auto;
+}
+
+input {
+  padding: 13px;
+}
+
+span {
+  color: red;
+}
+
+select {
+  margin: 20px auto;
+}
+
+option {
+  padding: 20px;
+}
+
+textarea {
+  margin: 20px auto;
+  text-align: center;
+  width: 600px;
+}
+
+@media screen and (max-width:780px) {
+  textarea {
+    width: 80%;
+  }
+
+  .main-topic>p {
+    font-size: 13px;
+  }
+
+  .contact>p {
+    font-size: 13px;
+  }
+
+}
