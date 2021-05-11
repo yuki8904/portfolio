@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+}
+section {
+  height:100vh;
+  background-color: #4a90e2;
+}
+
+/* main */
+
+/* left */
+.main_visual_left {
+  width: 20%;
+  position: relative;
+  background-color: white;
+  text-align: center;
+  writing-mode:tb;
+}
+.main_ttl {
+  margin: 100px 0;
+  position: fixed;
+  color: #4a90e2;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+.main_ttl> span {
+  color: #de6092;
+}
+.big_ttl {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+/* right */
+.main_visual_right {
+  width: 80%;
+  height: 100vh;
+  background-color: #4a90e2;
+}
+#home,#about,#skil,#works,#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav_ttl {
+  letter-spacing: 20px;
+  margin-bottom: 20px;
+}
+.nav_ttl>span {
+  background-color: white;
+  padding: 8px;
+  color: #de6092;
+  font-size: 15px;
+}
+.nav_ttl>p {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.home_nav {
+  display: flex;
+  justify-content: center;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 200px;
+  border: 1px solid #4a90e2;
+  border-radius: 50%;
+  margin: 20px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.item>p {
+  color: #de6092;
+}
+.item:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.item >img {
+  margin: auto;
+  width: 200px;
+}
+
+.item>img:hover {
+  animation-name:rotateYAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes rotateYAnime{
+	from{
+		transform: rotateY(0);
+		}
+	to{
+		transform: rotateY(-360deg);
+		}
+}
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #de6092;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* about */
+
+.ttl_about >span {
+  letter-spacing: 8px;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+  letter-spacing: 5px;
+}
+.description>ul {
+  text-align: center;
+}
+.min_ttl {
+  color: white;
+}
+
+/* skil */
+.ttl_skil >span{
+  letter-spacing: 3px;
+}
+.skil_nav {
+  display: flex;
+}
+.item_skil>img {
+  width: 220px;
+  padding-bottom: 30px;
+}
+.item_skil>p {
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: normal;
+}
+.item_box {
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-weight: normal;
+}
+.item_skil>.mdl_img {
+  width: 238px;
+}
+.item_skil:hover{
+  animation: none;
+}
+
+/* works */
+.works_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.works_item>a>img {
+  width: 400px;
+  padding: 20px;
+}
+.works_item>a>img:hover {
+  opacity: 0.8;
+}
+.works_item>p{
+  text-align: center;
+  font-weight: lighter;
+}
+
+/* contact */
+.contact_nav>p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* footer */
+footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+}
+footer>p {
+  padding: 20px;
+  letter-spacing: 3px;
+}
+footer>p>br {
+  display: none;
+}
+
+@media screen and (max-width:780px) {
+  #home,#contact {
+    height: 150vh;
+  }
+  #about {
+    height: 120vh;
+  }
+  #skil {
+    height: 150vh;
+  }
+  #works  {
+    height: 180vh;
+  }
+  .main_visual_left {
+    width: 15%;
+  }
+  .main_ttl {
+    display: flex;
+    margin: 20% 0;
+  }
+  .big_ttl {
+    font-size: 50px;
+  }
+  .main_visual_right {
+    width: 85%;
+  }
+  .nav_ttl {
+    justify-content: center;
+  }
+  .nav_ttl>span {
+    font-size: 13px;
+  }
+  .nav_ttl>p {
+    font-size: 25px;
+    width: fit-content;
+  }
+  .top_ttl {
+    letter-spacing: 3px;
+  }
+  .home_nav {
+    display: contents;
+  }
+  .skil_nav {
+    flex-direction: column;
+  }
+  .item_skil {
+    margin-bottom: 100px;
+  }
+  .works_item {
+    text-align: center;
+  }
+  .works_item>a>img {
+    width: 280px;
+    margin: 40px 0;
+    padding: 0;
+  }
+  footer>p>br {
+    display: block;
+  }
+}
