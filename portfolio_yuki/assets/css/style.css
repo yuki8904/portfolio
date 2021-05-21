@@ -15,14 +15,14 @@ section {
 
 /* left */
 .main_visual_left {
-  width: 20%;
+  width: 10%;
   position: relative;
   background-color: white;
   text-align: center;
   writing-mode:tb;
 }
 .main_ttl {
-  margin: 100px 0;
+  margin-top: 100px;
   position: fixed;
   color: #4a90e2;
   font-family: 'Shadows Into Light Two', cursive;
@@ -31,13 +31,13 @@ section {
   color: #de6092;
 }
 .big_ttl {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
 }
 
 /* right */
 .main_visual_right {
-  width: 80%;
+  width: 90%;
   height: 100vh;
   background-color: #4a90e2;
 }
@@ -199,7 +199,7 @@ section {
   justify-content: center;
 }
 .works_item>a>img {
-  width: 300px;
+  width: 200px;
   padding: 20px;
 }
 .works_item>a>img:hover {
@@ -280,11 +280,6 @@ footer>p>br {
   }
   .works_item {
     text-align: center;
-  }
-  .works_item>a>img {
-    width: 250px;
-    margin: 40px 0;
-    padding: 0;
   }
   .works_item>p {
     width: 250px;
