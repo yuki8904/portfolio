@@ -242,17 +242,10 @@ footer>p>br {
     height: 180vh;
   }
   .main_visual_left {
-    width: 15%;
-  }
-  .main_ttl {
-    display: flex;
-    margin: 20% 0;
-  }
-  .big_ttl {
-    font-size: 50px;
+    display: none;
   }
   .main_visual_right {
-    width: 85%;
+    width: 100%;
   }
   .nav_ttl {
     justify-content: center;
